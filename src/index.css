@@ -1,0 +1,56 @@
+/* ===== GLOBAL RESET & BASE ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Positive Color Psychology Palette */
+  --gold: #F59E0B;
+  --gold-light: #FBBF24;
+  --gold-softer: #FDE68A;
+  --amber: #D97706;
+  --green: #10B981;
+  --green-light: #6EE7B7;
+  --green-soft: #D1FAE5;
+  --coral: #FB7185;
+  --coral-soft: #FFE4E6;
+  --rose: #F43F5E;
+  --peach: #FFF7ED;
+  --cream: #FFFBEB;
+  --warm-white: #FEFCE8;
+  --text-dark: #1C1917;
+  --text-body: #44403C;
+  --text-muted: #78716C;
+  --text-light: #A8A29E;
+  --white: #FFFFFF;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 30px rgba(245, 158, 11, 0.15);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 30px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(160deg, var(--cream) 0%, var(--peach) 40%, #FFF1F2 100%);
+  color: var(--text-body);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}

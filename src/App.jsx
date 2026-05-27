@@ -114,6 +114,8 @@ function App() {
     })
   }
 
+  const testimonialCountClass = testimonials.length > 4 ? 'count-many' : `count-${testimonials.length}`
+
   return (
     <div className="app">
       {/* ===== HERO ===== */}
@@ -252,7 +254,7 @@ function App() {
             <p>Loading thoughts...</p>
           </div>
         ) : testimonials.length > 0 ? (
-          <div className="testimonials-grid">
+          <div className={`testimonials-grid ${testimonialCountClass}`}>
             {testimonials.map((t) => (
               <div className="testimonial-card" key={t.id}>
                 <div className="card-header">

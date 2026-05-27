@@ -520,11 +520,62 @@
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-auto-rows: minmax(220px, auto);
   gap: 20px;
 }
 
+.testimonials-grid.count-1 {
+  grid-template-columns: 1fr;
+}
+
+.testimonials-grid.count-2 .testimonial-card {
+  grid-column: span 1;
+}
+
+.testimonials-grid.count-3 {
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+}
+
+.testimonials-grid.count-3 .testimonial-card:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.testimonials-grid.count-3 .testimonial-card:nth-child(2),
+.testimonials-grid.count-3 .testimonial-card:nth-child(3) {
+  grid-column: span 1;
+}
+
+.testimonials-grid.count-4 {
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+}
+
+.testimonials-grid.count-4 .testimonial-card:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.testimonials-grid.count-4 .testimonial-card:nth-child(4) {
+  grid-column: span 2;
+}
+
+.testimonials-grid.count-many .testimonial-card:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.testimonials-grid.count-many .testimonial-card:nth-child(2),
+.testimonials-grid.count-many .testimonial-card:nth-child(3),
+.testimonials-grid.count-many .testimonial-card:nth-child(4),
+.testimonials-grid.count-many .testimonial-card:nth-child(5) {
+  grid-column: span 1;
+}
+
 .testimonial-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: var(--white);
   border-radius: var(--radius-md);
   padding: 24px;
